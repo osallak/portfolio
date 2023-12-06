@@ -1,0 +1,136 @@
+.toast-container {
+  box-sizing: border-box;
+  font-size: 14px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.toast-container[position^="top-"] {
+  top: 20px;
+}
+
+.toast-container[position^="bottom-"] {
+  bottom: 20px;
+}
+
+.toast-container[position$="-right"] {
+  right: 20px;
+}
+
+.toast-container[position$="-left"] {
+  left: 20px;
+}
+
+.toast-container[position$="-center"] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast-container[position^="center-"] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toast {
+  background: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  width: calc(100vw - 40px);
+  max-width: 300px;
+  box-sizing: border-box;
+  padding: 16px;
+  gap: 10px;
+  animation-duration: 0.5s;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+}
+
+.toast-image {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+}
+.toast-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.toast-text-container {
+  text-align: left;
+  flex: 1;
+}
+
+.toast-title {
+  font-weight: 600;
+}
+
+.toast-message {
+  font-weight: lighter;
+  opacity: 0.8;
+}
+
+.toast-close-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.toast[transition="ltr"] {
+  animation-name: left-to-right;
+}
+.toast[transition="rtl"] {
+  animation-name: right-to-left;
+}
+.toast[transition="ttb"] {
+  animation-name: top-to-bottom;
+}
+.toast[transition="btt"] {
+  animation-name: bottom-to-top;
+}
+
+@keyframes left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes top-to-bottom {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes bottom-to-top {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

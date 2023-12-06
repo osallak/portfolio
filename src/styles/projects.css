@@ -1,0 +1,108 @@
+#projects {
+  background-image: url("../assets/projects_bg.png");
+  background-size: clamp(1440px, 100vw, 100vw);
+}
+
+.projects-title h1 {
+  font-size: 4rem;
+  line-height: 6rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10vmin;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.projects-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cards-section {
+  margin-bottom: 20vmin;
+  width: 100%;
+}
+
+.card {
+  background: var(--background2-with-opacity);
+  backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.card img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  margin: auto;
+}
+
+/* Slider */
+
+/* Slider Arrows */
+.custom-arrow:disabled {
+  display: none !important;
+}
+.custom-arrow svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  fill: var(--primary) !important;
+}
+.custom-arrow {
+  height: 100% !important;
+}
+.custom-prev {
+  left: 0 !important;
+  border-radius: 1rem 0 0 1rem !important;
+  transition: 0.5s ease-in-out !important;
+}
+.custom-prev:hover {
+  background: linear-gradient(to right, black 0%, transparent 100%) !important;
+}
+.custom-next {
+  right: 0 !important;
+  border-radius: 0 1rem 1rem 0 !important;
+  transition: 0.5s ease-in-out !important;
+}
+.custom-next:hover {
+  background: linear-gradient(to right, transparent 0%, black 100%) !important;
+}
+
+/* Slider Pagination */
+
+.custom-pagination {
+  bottom: -0.5rem !important;
+  transform: translateY(100%) !important;
+}
+.custom-page {
+  background: var(--background2-with-opacity) !important;
+  backdrop-filter: blur(2px) !important;
+  width: 0.6rem !important;
+  height: 0.6rem !important;
+}
+.custom-page.is-active,
+.custom-page:hover {
+  background: var(--primary) !important;
+}
+
+@media only screen and (width < 900px) {
+  .projects-title h1 {
+    font-size: clamp(3rem, 10vw, 4rem);
+    line-height: clamp(4rem, 12vw, 6rem);
+  }
+}

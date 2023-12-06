@@ -1,0 +1,111 @@
+.nav {
+  height: var(--nav-height);
+  left: 0;
+  right: 0;
+  background: var(--background);
+  z-index: 103;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  position: absolute;
+  top: 0;
+}
+
+.vertical-line-nav {
+  z-index: 101;
+  bottom: unset;
+  height: 130px;
+}
+
+.logo-container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.logo {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.nav-options ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-icons {
+  display: none;
+}
+
+.nav-options ul li a {
+  padding: 15px;
+  transition: 0.2s ease-in-out;
+}
+.nav-options ul li a:hover {
+  color: var(--primary);
+}
+
+@media only screen and (1200px < width <= 1400px) {
+  .nav {
+    padding: 0 7.5%;
+  }
+}
+
+@media only screen and (width <= 1200px) {
+  .nav {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (width <= 600px) {
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+  .menu-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-options {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background-color: var(--background);
+  }
+  .nav-options ul {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .nav-options ul li {
+    width: 100%;
+  }
+
+  .nav-options ul li a {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .nav-options ul li a:hover {
+    background: var(--background2);
+  }
+
+  .nav-icons {
+    display: inline-flex;
+  }
+}
