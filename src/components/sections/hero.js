@@ -1,7 +1,7 @@
 import { CONFIG } from "../../config";
 import { ReactComponent as Arrow } from "../../assets/hero_arrow.svg";
 import "../../styles/hero.css";
-
+import React, { Component }  from 'react';
 const Hero = (props) => {
   const handleButtonClick = (url, isDownloadable) => {
     if (isDownloadable) {

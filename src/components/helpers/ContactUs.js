@@ -21,10 +21,10 @@ export const ContactUs = (props) => {
 
     emailjs
       .sendForm(
-        "default_service",
-        "template_ezky04m",
+        "spinshot42",
+        "template_dkx70u9",
         form.current,
-        "56P5dx6IjMjag6a8o"
+        "3luOGuexlCVAH9m8s"
       )
       .then(
         (result) => {
@@ -37,7 +37,7 @@ export const ContactUs = (props) => {
           setTimeout(function () {
             setButtonText(CONFIG.contact[0].send_button_text);
           }, 5000);
-          console.log(result.text);
+          console.log('success: ', result.text);
         },
         (error) => {
           setButtonText("Failure");
@@ -49,7 +49,7 @@ export const ContactUs = (props) => {
           setTimeout(function () {
             setButtonText(CONFIG.contact[0].send_button_text);
           }, 5000);
-          console.log(error.text);
+          console.log('error', error.text);
         }
       );
 

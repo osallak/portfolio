@@ -1,17 +1,17 @@
 import React from "react";
-import Nav from "./components/nav";
-import Hero from "./components/sections/hero";
-import "./styles.css";
 import { useIntersection } from "use-intersection";
-import { setGlobalState } from "./components/state";
 import CheckScrollBar from "./components/helpers/check-scroll-bar";
+import Nav from "./components/nav";
 import ScrollDownArrow from "./components/scroll-down-arrow";
 import About from "./components/sections/about";
+import Hero from "./components/sections/hero";
 import Projects from "./components/sections/projects";
+import { setGlobalState } from "./components/state";
+import "./styles.css";
 // Needed
 import "@splidejs/react-splide/css/skyblue";
-import Contact from "./components/sections/contact";
 import Footer from "./components/footer";
+import Contact from "./components/sections/contact";
 
 export default function App() {
   const scrollRef = React.useRef(null);
