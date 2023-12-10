@@ -11,33 +11,18 @@ import InstagramLogo from "./assets/instagram_logo.svg";
 import SendIconForToast, {
   ReactComponent as SendIcon,
 } from "./assets/send_icon.svg";
-import TwitterLogo from "./assets/twitter_logo.svg";
-import YoutubeLogo from "./assets/youtube_logo.svg";
-export const CONFIG = {
-  design: [
-    { name: "SaulDesign", url: "https://www.youtube.com/@SaulDesign08" },
-  ],
 
+export const CONFIG = {
   socialMedia: [
     {
       name: "Facebook",
-      url: "https://facebook.com/",
+      url: "https://google.com",
       icon: FacebookLogo,
     },
     {
       name: "Instagram",
-      url: "https://www.instagram.com/",
+      url: "https://www.instagram.com/uss4ma.0",
       icon: InstagramLogo,
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/",
-      icon: TwitterLogo,
-    },
-    {
-      name: "Youtube",
-      url: "https://www.youtube.com/",
-      icon: YoutubeLogo,
     },
   ],
 
@@ -83,28 +68,28 @@ export const CONFIG = {
       tabs: [
         {
           id: 1,
-          title: "General",
+          title: "All",
           project_detail: [
             {
               id: 1,
               name: "SpinShot",
               image:
-                "https://clouddevs.com/3dbay/files/preview/960x1152/11632327822enep8xig1rjtp8rt2i2dnyqhdvfusrzfzlia82cquesiplirqc5bjdl0rkij00fuks1yjrgwyutspvswkwdfwajedcfbt5mrkvly.png",
-              url: "https://bootcamp.uxdesign.cc/creating-design-guidelines-for-your-project-f344ecc4097f",
+                "this is a test",
+              url: "https://github.com/osallak/SpinShot",
             },
             {
               id: 2,
               name: "Inception",
               image:
-                "https://clouddevs.com/3dbay/files/preview/960x1152/11632327822enep8xig1rjtp8rt2i2dnyqhdvfusrzfzlia82cquesiplirqc5bjdl0rkij00fuks1yjrgwyutspvswkwdfwajedcfbt5mrkvly.png",
-              url: "https://bootcamp.uxdesign.cc/creating-design-guidelines-for-your-project-f344ecc4097f",
+                "",
+              url: "https://github.com/osallak/inception",
             },
             {
               id: 3,
               name: "IRC",
               image:
-                "https://clouddevs.com/3dbay/files/preview/960x1152/11632327822enep8xig1rjtp8rt2i2dnyqhdvfusrzfzlia82cquesiplirqc5bjdl0rkij00fuks1yjrgwyutspvswkwdfwajedcfbt5mrkvly.png",
-              url: "https://bootcamp.uxdesign.cc/creating-design-guidelines-for-your-project-f344ecc4097f",
+                "",
+              url: "https://github.com/osallak/ft_irc",
             },
           ],
         },

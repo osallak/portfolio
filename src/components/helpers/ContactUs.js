@@ -37,7 +37,6 @@ export const ContactUs = (props) => {
           setTimeout(function () {
             setButtonText(CONFIG.contact[0].send_button_text);
           }, 5000);
-          console.log('success: ', result.text);
         },
         (error) => {
           setButtonText("Failure");
@@ -49,7 +48,6 @@ export const ContactUs = (props) => {
           setTimeout(function () {
             setButtonText(CONFIG.contact[0].send_button_text);
           }, 5000);
-          console.log('error', error.text);
         }
       );
 
