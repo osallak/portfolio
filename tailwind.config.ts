@@ -9,16 +9,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        tronBlue: '#00FFF6',
-        tronBackground: '#0A0A0A',
-        tronAccent: '#1B8CD8',
-        tronText: '#00FFF6',
-        tronGray: '#3E4C59',
-        background: '#ffffff', // default light background
-        foreground: '#171717', // default light foreground
+        'tron-blue': '#00FFF6',
+        'tron-background': '#0A0A0A',
+        'tron-accent': '#1B8CD8',
+        'tron-text': '#00FFF6',
+        'tron-gray': '#3E4C59',
+        'strong-text': '#ffcc00',
+        background: '#ffffff',
+        foreground: '#171717',
+        'tron-cyber-green': '#1d2c33',
       },
       fontFamily: {
-        body: ['Inconsolata', 'monospace'], 
+        body: ['Inconsolata', 'monospace'],
         display: ['Inconsolata', 'monospace'],
       },
     },
