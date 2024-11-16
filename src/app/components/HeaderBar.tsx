@@ -1,53 +1,57 @@
-export default function HeaderBar({
-    leftText = {
-      main: 'ENCOM TOUCH APP',
-      accent1: 'OS',
-      accent2: '12',
-    },
-    rightText = 'OS | 012',
-  }) {
-    return (
+type TextContent = {
+  main: string;
+  accent1?: string;
+  accent2?: string;
+};
+
+interface HeaderBarProps {
+  leftText: TextContent;
+  rightText?: string;
+}
+
+export default function HeaderBar({ leftText, rightText }: HeaderBarProps) {
+  return (
+    <div
+      className="
+        w-full 
+        text-white 
+        py-[1px]
+        relative
+        flex
+        overflow-hidden
+        font-body
+        whitespace-nowrap
+        border-b border-tron-cyber-green
+        border-t border-tron-cyber-green
+        text-xs
+        bg-black
+      "
+    >
       <div
         className="
-          w-full 
-          text-white 
-          py-[1px]
-          px-[2px]
-          relative
-          flex
+          flex-1
+          px-2
           overflow-hidden
-          font-body
-          whitespace-nowrap
-          border-b border-tron-cyber-green
+          text-ellipsis
         "
       >
-        <div
-          className="
-            flex-1
-            bg-black 
-            -ml-[5px] 
-            px-2
-            overflow-hidden
-            text-ellipsis
-          "
-        >
-          {leftText.main}{' '}
-          <span className="text-tronAccent">{leftText.accent1}</span>
-          <span className="text-tronText">{leftText.accent2}</span>
-        </div>
-        <div
-          className="
-            bg-black 
-            text-right 
-            -mr-[5px] 
-            px-2
-            ml-1
-            flex-shrink-0
-          "
-        >
-          {rightText}
-        </div>
-
+        {leftText.main}
+        {leftText.accent1 && (
+          <span className="text-tronAccent"> {leftText.accent1}</span>
+        )}
+        {leftText.accent2 && (
+          <span className="text-tronText"> {leftText.accent2}</span>
+        )}
       </div>
-    );
-  }
+      <div
+        className="
+          text-right 
+          px-2
+          flex-shrink-0
+        "
+      >
+        {rightText}
+      </div>
+    </div>
+  );
+}

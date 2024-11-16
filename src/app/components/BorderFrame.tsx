@@ -1,6 +1,17 @@
 import ContentWindow from "./ContentWindow";
 import HeaderBar from "./HeaderBar";
 
+interface BorderFrameProps {
+    width?: string | number;
+    height?: string | number;
+    padding?: number;
+    innerOffset?: { x: number; y: number };
+    borderColor?: string;
+    shadowColor?: string;
+    showOuterBorder?: boolean;
+    children: React.ReactNode;
+  }
+
 export default function BorderFrame({ 
     width = '100%', 
     height = '100%', 
@@ -10,7 +21,7 @@ export default function BorderFrame({
     shadowColor = '#005b8e',
     showOuterBorder = true,
     children
-  }) {
+  }: BorderFrameProps) {
     return (
         <div style={{ width, height, padding }}>
           <div className="relative w-full h-full">

@@ -1,16 +1,27 @@
-import AboutSection from "./components/AboutSection";
-import BorderFrame from "./components/BorderFrame";
-import ContentWindow from "./components/ContentWindow";
-import HeaderBar from "./components/HeaderBar";
-import KeyboardSection from "./components/KeyboardSection";
-import NavigationSection from "./components/NavigationSection";
+import AboutSection from './components/AboutSection';
+import BorderFrame from './components/BorderFrame';
+import ContentWindow from './components/ContentWindow';
+import HeaderBar from './components/HeaderBar';
+import KeyboardSection from './components/KeyboardSection';
+import NavigationSection from './components/NavigationSection';
 
 export default function Home() {
   return (
     <main className="w-full h-screen flex justify-center items-center p-4">
       <BorderFrame>
         <div className="grid grid-cols-2 gap-2 w-full h-full">
-          <div className="grid grid-rows-[3fr,1fr] gap-2">
+          {/* Left Column */}
+          <div className="grid grid-rows-[auto_3fr_1fr] gap-[2px]">
+            {/* Top Header Bar */}
+            <div className='pt-[16px] pl-7 pr-10'>
+              <HeaderBar
+                leftText={{
+                  main: 'ENCOM TOUCH APP OS12',
+                }}
+                rightText="OS | 012"
+              />
+            </div>
+
             {/* About Section */}
             <ContentWindow
               title="README"
@@ -20,7 +31,7 @@ export default function Home() {
               <AboutSection />
             </ContentWindow>
 
-            {/* Bottom Left Section - Reserved for future use */}
+            {/* Bottom Left Section */}
             <ContentWindow
               title="SYSTEM"
               extension=".INFO"
@@ -30,6 +41,7 @@ export default function Home() {
             </ContentWindow>
           </div>
 
+          {/* Right Column */}
           <div className="grid grid-rows-[3fr,1fr] gap-2">
             {/* Navigation Section */}
             <ContentWindow
