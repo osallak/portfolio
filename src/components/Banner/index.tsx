@@ -392,7 +392,7 @@ export default function Banner() {
 
                 <div className="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-0">
                   <motion.a
-                    href="https://github.com/your-username"
+                    href="https://github.com/osallak"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -5 }}
@@ -402,7 +402,7 @@ export default function Banner() {
                     <FaGithub size={16} className="sm:text-xl md:text-2xl" />
                   </motion.a>
                   <motion.a
-                    href="https://linkedin.com/in/your-profile"
+                    href="https://linkedin.com/in/osallak"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -5 }}

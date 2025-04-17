@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter} from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -45,7 +45,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/osallak"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
@@ -54,7 +54,7 @@ const Footer = () => {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://linkedin.com/in/osallak"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
@@ -63,7 +63,7 @@ const Footer = () => {
               <FaLinkedin size={20} />
             </a>
             <a
-              href="https://twitter.com/your-handle"
+              href="https://x.com/uss4ma"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
