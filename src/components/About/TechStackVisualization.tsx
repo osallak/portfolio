@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaDocker, FaAws, FaGitAlt } from "react-icons/fa";
 import {
@@ -32,25 +32,6 @@ interface TechConnection {
 const TechStackVisualization = () => {
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
   const [connectedNodes, setConnectedNodes] = useState<string[]>([]);
-
-  // Find connected nodes when hovering
-  useEffect(() => {
-    if (!hoveredNode) {
-      setConnectedNodes([]);
-      return;
-    }
-
-    const connected: string[] = [];
-    connections.forEach((conn) => {
-      if (conn.from === hoveredNode) {
-        connected.push(conn.to);
-      } else if (conn.to === hoveredNode) {
-        connected.push(conn.from);
-      }
-    });
-
-    setConnectedNodes(connected);
-  }, [hoveredNode]);
 
   const nodes: TechNode[] = [
     // Frontend
@@ -199,39 +180,61 @@ const TechStackVisualization = () => {
     },
   ];
 
-  const connections: TechConnection[] = [
-    // Frontend connections
-    { from: "react", to: "ts" },
-    { from: "react", to: "next" },
-    { from: "next", to: "tailwind" },
-    { from: "ts", to: "js" },
-    { from: "react", to: "tailwind" },
+  const connections = useMemo<TechConnection[]>(
+    () => [
+      // Frontend connections
+      { from: "react", to: "ts" },
+      { from: "react", to: "next" },
+      { from: "next", to: "tailwind" },
+      { from: "ts", to: "js" },
+      { from: "react", to: "tailwind" },
 
-    // Backend connections
-    { from: "node", to: "express" },
-    { from: "node", to: "nest" },
-    { from: "js", to: "node" },
-    { from: "express", to: "js" },
+      // Backend connections
+      { from: "node", to: "express" },
+      { from: "node", to: "nest" },
+      { from: "js", to: "node" },
+      { from: "express", to: "js" },
 
-    // Database connections
-    { from: "postgres", to: "node" },
-    { from: "nest", to: "postgres" },
-    { from: "mongo", to: "express" },
-    { from: "postgres", to: "mysql" },
+      // Database connections
+      { from: "postgres", to: "node" },
+      { from: "nest", to: "postgres" },
+      { from: "mongo", to: "express" },
+      { from: "postgres", to: "mysql" },
 
-    // DevOps connections
-    { from: "aws", to: "docker" },
-    { from: "docker", to: "git" },
-    { from: "node", to: "aws" },
+      // DevOps connections
+      { from: "aws", to: "docker" },
+      { from: "docker", to: "git" },
+      { from: "node", to: "aws" },
 
-    // Language connections
-    { from: "js", to: "cpp" },
-    { from: "cpp", to: "aws" },
+      // Language connections
+      { from: "js", to: "cpp" },
+      { from: "cpp", to: "aws" },
 
-    // Cross-category connections
-    { from: "react", to: "js" },
-    { from: "postgres", to: "aws" },
-  ];
+      // Cross-category connections
+      { from: "react", to: "js" },
+      { from: "postgres", to: "aws" },
+    ],
+    []
+  );
+
+  // Find connected nodes when hovering
+  useEffect(() => {
+    if (!hoveredNode) {
+      setConnectedNodes([]);
+      return;
+    }
+
+    const connected: string[] = [];
+    connections.forEach((conn) => {
+      if (conn.from === hoveredNode) {
+        connected.push(conn.to);
+      } else if (conn.to === hoveredNode) {
+        connected.push(conn.from);
+      }
+    });
+
+    setConnectedNodes(connected);
+  }, [hoveredNode, connections]);
 
   // Create dynamic stars in the background
   const [stars, setStars] = useState<

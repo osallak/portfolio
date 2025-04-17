@@ -88,6 +88,14 @@ const SkillBubble = ({
   onHover,
   onLeave,
   category,
+}: {
+  skill: { name: string; level: number };
+  index: number;
+  total: number;
+  isHovered: boolean;
+  onHover: (name: string) => void;
+  onLeave: () => void;
+  category: keyof typeof categoryColors;
 }) => {
   const colors = categoryColors[category];
   const angle = (index / total) * 360;
@@ -136,8 +144,8 @@ const SkillBubble = ({
 // Main component
 const SkillSphere = () => {
   const [activeCategory, setActiveCategory] = useState("frontend");
-  const [hoveredSkill, setHoveredSkill] = useState(null);
-  const containerRef = useRef(null);
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isRotating, setIsRotating] = useState(true);
 
   // Get active skills based on selected category
@@ -156,7 +164,7 @@ const SkillSphere = () => {
     if (!containerRef.current || !isRotating) return;
 
     let angle = 0;
-    let requestId;
+    let requestId: number | undefined;
 
     const rotate = () => {
       if (containerRef.current) {
@@ -169,7 +177,9 @@ const SkillSphere = () => {
     requestId = requestAnimationFrame(rotate);
 
     return () => {
-      cancelAnimationFrame(requestId);
+      if (requestId) {
+        cancelAnimationFrame(requestId);
+      }
     };
   }, [isRotating]);
 
@@ -364,7 +374,7 @@ const SkillSphere = () => {
                   isHovered={hoveredSkill === skill.name}
                   onHover={setHoveredSkill}
                   onLeave={() => setHoveredSkill(null)}
-                  category={activeCategory}
+                  category={activeCategory as keyof typeof categoryColors}
                 />
               ))}
             </div>
