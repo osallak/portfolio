@@ -5,6 +5,13 @@ import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
+/**
+ * Renders an animated, interactive portfolio banner section with layered parallax effects, typewriter text, and animated UI elements.
+ *
+ * The banner features scroll- and mouse-driven parallax backgrounds, animated hexagons, glowing particles, a glassmorphism content card, typewriter introduction, and interactive action buttons for resume download and social links. A scroll indicator is displayed on larger screens.
+ *
+ * @returns The complete animated banner React element.
+ */
 export default function Banner() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false });
