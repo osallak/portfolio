@@ -8,7 +8,9 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import LoadingScreen from "@/components/LoadingScreen";
 import GitHubStats from "@/components/GitHubStats";
+import InteractiveTimeline from "@/components/InteractiveTimeline";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -30,6 +32,7 @@ export default function Home() {
             <div className="mt-12 mb-12">
               <GitHubStats />
             </div>
+            <InteractiveTimeline />
             <Projects />
           </div>
         </div>
@@ -42,6 +45,7 @@ export default function Home() {
             <Contact />
           </div>
         </div>
+        <Footer />
       </motion.div>
     </main>
   );

@@ -306,7 +306,7 @@ export default function Banner() {
           }}
         >
           <motion.div
-            className="relative backdrop-blur-md bg-black/30 rounded-2xl p-6 sm:p-10 border border-[#2e2e2e] shadow-xl overflow-hidden"
+            className="relative backdrop-blur-md bg-black/30 rounded-2xl p-4 sm:p-6 md:p-10 border border-[#2e2e2e] shadow-xl overflow-hidden mx-3 sm:mx-0"
             whileHover={{ boxShadow: "0 0 30px 5px rgba(168, 85, 247, 0.3)" }}
             transition={{ duration: 0.3 }}
           >
@@ -316,36 +316,36 @@ export default function Banner() {
             </div>
 
             {/* Title Group */}
-            <div className="space-y-4 text-center relative">
+            <div className="space-y-3 sm:space-y-4 text-center relative">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="inline-block"
               >
-                <span className="text-xs md:text-sm uppercase tracking-[0.3em] text-gray-400 font-medium">
+                <span className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-gray-400 font-medium">
                   Welcome to my portfolio
                 </span>
               </motion.div>
 
               <motion.h1
                 variants={itemVariants}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight"
+                className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight"
               >
                 Hi, I&apos;m{" "}
                 <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text relative">
                   Oussama!
-                  <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500 opacity-60"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-gradient-to-r from-purple-500 to-pink-500 opacity-60"></span>
                 </span>
               </motion.h1>
 
               <motion.h3
                 variants={itemVariants}
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-2 md:mt-4 leading-tight"
+                className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-1 sm:mt-2 md:mt-4 leading-tight"
               >
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
                   <span>Passionate about</span>
-                  <div className="w-[240px] sm:w-[280px] md:w-[320px] inline-flex items-center justify-start overflow-hidden">
+                  <div className="w-[220px] sm:w-[280px] md:w-[320px] inline-flex items-center justify-start overflow-hidden">
                     <span className="bg-gradient-to-r from-[#8c1df3] via-[#f714d1] to-[#621aaf] text-transparent bg-clip-text bg-[length:500%] animate-gradient">
                       {typewriterText}
                     </span>
@@ -356,7 +356,7 @@ export default function Banner() {
 
               <motion.h3
                 variants={itemVariants}
-                className="text-lg sm:text-xl md:text-2xl font-thin mx-auto leading-relaxed mt-2"
+                className="text-base sm:text-xl md:text-2xl font-thin mx-auto leading-relaxed mt-1 sm:mt-2"
               >
                 {occupation}
               </motion.h3>
@@ -366,13 +366,13 @@ export default function Banner() {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.8, delay: 1.5 }}
-                className="w-32 h-1 bg-gradient-to-r from-[#8c1df3] to-[#621aaf] mx-auto mt-4 rounded-full"
+                className="w-24 sm:w-32 h-0.5 sm:h-1 bg-gradient-to-r from-[#8c1df3] to-[#621aaf] mx-auto mt-3 sm:mt-4 rounded-full"
               />
 
               {/* Action buttons */}
               <motion.div
                 variants={itemVariants}
-                className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
+                className="mt-4 sm:mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4"
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -381,7 +381,7 @@ export default function Banner() {
                   <a
                     href="/resume.pdf"
                     download
-                    className="inline-flex items-center gap-2 px-5 md:px-6 py-3 bg-gradient-to-r from-[#8c1df3] to-[#621aaf] rounded-full
+                    className="inline-flex items-center gap-2 px-5 md:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-[#8c1df3] to-[#621aaf] rounded-full
                     text-white text-sm md:text-base font-semibold transition-all duration-300
                     shadow-lg hover:shadow-purple-500/30"
                   >
@@ -390,16 +390,16 @@ export default function Banner() {
                   </a>
                 </motion.div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-0">
                   <motion.a
                     href="https://github.com/your-username"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
+                    className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
                   >
-                    <FaGithub size={20} />
+                    <FaGithub size={16} className="sm:text-xl md:text-2xl" />
                   </motion.a>
                   <motion.a
                     href="https://linkedin.com/in/your-profile"
@@ -407,9 +407,9 @@ export default function Banner() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
+                    className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
                   >
-                    <FaLinkedin size={20} />
+                    <FaLinkedin size={16} className="sm:text-xl md:text-2xl" />
                   </motion.a>
                 </div>
               </motion.div>

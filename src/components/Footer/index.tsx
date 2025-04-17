@@ -1,41 +1,80 @@
-import Link from "next/link";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+"use client";
+
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="w-full border-t border-gray-800 ">
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <div className="flex justify-center space-x-8">
-          <Link
-            href="https://github.com/osallak"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
+    <motion.footer
+      className="w-full py-8 mt-10 border-t border-[#2e2e2e] bg-black/20 backdrop-blur-md"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col items-center sm:items-start">
+            <motion.div
+              className="text-2xl font-bold bg-gradient-to-r from-[#8c1df3] to-[#621aaf] text-transparent bg-clip-text"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              OS
+            </motion.div>
+            <motion.p
+              className="text-sm text-white/60 mt-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              © {currentYear} Oussama Sallak. All rights reserved.
+            </motion.p>
+          </div>
+
+          <motion.div
+            className="flex items-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
           >
-            <FaGithub className="w-6 h-6" />
-          </Link>
-          <Link
-            href="https://linkedin.com/in/osallak"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <FaLinkedin className="w-6 h-6" />
-          </Link>
-          <Link
-            href="https://twitter.com/uss4ma"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <FaXTwitter className="w-6 h-6" />
-          </Link>
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
+              aria-label="GitHub Profile"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
+              aria-label="LinkedIn Profile"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <a
+              href="https://twitter.com/your-handle"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-[#2e2e2e] text-white hover:bg-gradient-to-r from-[#8c1df3] to-[#621aaf] transition-all duration-300"
+              aria-label="Twitter Profile"
+            >
+              <FaTwitter size={20} />
+            </a>
+          </motion.div>
         </div>
-        <p className="text-center text-sm text-gray-400 mt-4">
-          © {new Date().getFullYear()} Oussama Sallak. All rights reserved.
-        </p>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
