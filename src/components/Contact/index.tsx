@@ -423,7 +423,7 @@ function Contact() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-4 px-8 py-3 bg-gradient-to-r from-[#b520fe] to-[#621aaf] rounded-full
+                    className="mt-4 px-8 py-3 bg-gradient-to-r from-[#8c1df3] to-[#621aaf] rounded-full
                     text-white text-base font-semibold flex items-center justify-center gap-2 transition-all
                     shadow-lg hover:shadow-purple-500/30 whitespace-nowrap w-fit relative overflow-hidden group"
                   >

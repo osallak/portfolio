@@ -361,6 +361,9 @@ const InteractiveTimeline = () => {
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 relative"
             layout
+            transition={{
+              layout: { type: "spring", damping: 30, stiffness: 200 },
+            }}
           >
             {visibleEvents.map((event) => (
               <TimelineEvent
@@ -380,7 +383,10 @@ const InteractiveTimeline = () => {
                 className="px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-[#2e2e2e] text-white/80 hover:text-white hover:bg-gradient-to-r hover:from-[#8c1df3] hover:to-[#621aaf] transition-all duration-300 font-medium flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                layout
+                layout="position"
+                transition={{
+                  layout: { duration: 0.3, ease: "easeInOut" },
+                }}
               >
                 {expanded ? (
                   <>
