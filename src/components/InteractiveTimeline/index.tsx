@@ -14,6 +14,7 @@ const timelineData = [
       "Began learning basic HTML, CSS, and Java through various online courses",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const timelineData = [
       "Built small projects like calculators and simple applications to practice coding skills",
     category: "project",
     icon: <FaCode className="text-purple-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const timelineData = [
       "Joined 1337 (42 Network) to pursue intensive software engineering education",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: true,
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const timelineData = [
       "Mastered C programming through multiple projects focused on memory management, algorithms, and UNIX systems programming",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ const timelineData = [
       "Developed advanced understanding of threads, processes, synchronization, and networking fundamentals",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 6,
@@ -59,6 +64,7 @@ const timelineData = [
       "Won second place in a robotics competition in Meknes, Morocco, building and programming a robot car with Arduino to solve a maze autonomously",
     category: "achievement",
     icon: <FaTrophy className="text-yellow-400" />,
+    isKeyMilestone: true,
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const timelineData = [
       "Created a fully-featured UNIX shell with built-in commands, pipes, redirections, and signal handling",
     category: "achievement",
     icon: <FaTrophy className="text-yellow-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 8,
@@ -77,6 +84,7 @@ const timelineData = [
       "Transitioned to C++ and gained expertise in OOP principles, design patterns, and STL",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 9,
@@ -86,6 +94,7 @@ const timelineData = [
       "Achieved 4th place with a team of three in a competitive problem solving competition held in Rabat, Morocco",
     category: "achievement",
     icon: <FaTrophy className="text-yellow-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 10,
@@ -95,6 +104,7 @@ const timelineData = [
       "Built a raycasting engine from scratch, implementing rendering techniques and 3D mathematics",
     category: "achievement",
     icon: <FaTrophy className="text-yellow-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 11,
@@ -104,6 +114,7 @@ const timelineData = [
       "Developed expertise in network protocols, containerization, infrastructure management, and DevOps practices",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 12,
@@ -113,6 +124,7 @@ const timelineData = [
       "Completed the common core curriculum at 1337 with a full-stack web application, demonstrating proficiency across the entire software stack",
     category: "achievement",
     icon: <FaTrophy className="text-yellow-400" />,
+    isKeyMilestone: true,
   },
   {
     id: 13,
@@ -122,6 +134,7 @@ const timelineData = [
       "Led KYC implementation for a fintech startup, reducing verification times by 30% and enhancing platform scalability",
     category: "work",
     icon: <FaBriefcase className="text-green-400" />,
+    isKeyMilestone: true,
   },
   {
     id: 14,
@@ -131,24 +144,37 @@ const timelineData = [
       "Developed high-traffic promotion platform for Activia Danone handling 100K+ users with ML-powered product recognition",
     category: "work",
     icon: <FaBriefcase className="text-green-400" />,
+    isKeyMilestone: true,
   },
   {
     id: 15,
-    date: "Jul 2024 - Present",
+    date: "Jul 2024 - Mar 2025",
     title: "Freelance Development",
     description:
       "Building web applications, APIs, and Discord bots for various clients while advancing technical expertise",
     category: "work",
     icon: <FaBriefcase className="text-green-400" />,
+    isKeyMilestone: false,
   },
   {
     id: 16,
+    date: "Apr 2025 - Present",
+    title: "Full Stack Developer at Akera",
+    description:
+      "Working on building and maintaining scalable web applications, focusing on both frontend and backend development",
+    category: "work",
+    icon: <FaBriefcase className="text-green-400" />,
+    isKeyMilestone: true,
+  },
+  {
+    id: 17,
     date: "Current",
     title: "Advanced Curriculum",
     description:
       "Pursuing specialized studies in web technologies, distributed systems, and infrastructure management at 1337",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
+    isKeyMilestone: false,
   },
 ];
 
@@ -240,31 +266,40 @@ const InteractiveTimeline = () => {
   // Memoize the timeline data to prevent unnecessary re-creation
   const memoizedTimelineData = useMemo(() => timelineData, []);
 
-  // Filter timeline events by category
+  // Filter timeline events by category and key milestones
   useEffect(() => {
-    if (activeCategory === "all") {
-      setFilteredEvents(memoizedTimelineData);
-    } else {
-      setFilteredEvents(
-        memoizedTimelineData.filter(
-          (event) => event.category === activeCategory
-        )
-      );
-    }
-    setActiveEventId(null);
-    setExpanded(false);
-  }, [activeCategory, memoizedTimelineData]);
+    let filtered = memoizedTimelineData;
 
-  // Calculate visible events - show only a limited number when not expanded
+    // First filter by category
+    if (activeCategory !== "all") {
+      filtered = filtered.filter((event) => event.category === activeCategory);
+    }
+
+    // Then filter by key milestones if not expanded
+    if (!expanded) {
+      filtered = filtered.filter((event) => event.isKeyMilestone);
+    }
+
+    setFilteredEvents(filtered);
+    setActiveEventId(null);
+  }, [activeCategory, memoizedTimelineData, expanded]);
+
+  // Calculate visible events - show all filtered events
   const visibleEvents = useMemo(() => {
-    const limit = expanded
-      ? filteredEvents.length
-      : Math.min(6, filteredEvents.length);
-    return filteredEvents.slice(0, limit);
-  }, [filteredEvents, expanded]);
+    return filteredEvents;
+  }, [filteredEvents]);
 
   // Check if there are more events to show
-  const hasMoreEvents = filteredEvents.length > 6;
+  const hasMoreEvents = useMemo(() => {
+    if (expanded) return false;
+    const allEvents =
+      activeCategory === "all"
+        ? memoizedTimelineData
+        : memoizedTimelineData.filter(
+            (event) => event.category === activeCategory
+          );
+    return allEvents.length > filteredEvents.length;
+  }, [activeCategory, expanded, filteredEvents.length, memoizedTimelineData]);
 
   // Memoize the categories to prevent re-renders
   const memoizedCategories = useMemo(() => categories, []);
@@ -362,16 +397,28 @@ const InteractiveTimeline = () => {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 relative"
             layout
             transition={{
-              layout: { type: "spring", damping: 30, stiffness: 200 },
+              layout: { duration: 0.3, ease: "easeInOut" },
+              opacity: { duration: 0.2 },
             }}
           >
             {visibleEvents.map((event) => (
-              <TimelineEvent
+              <motion.div
                 key={event.id}
-                event={event}
-                isActive={activeEventId === event.id}
-                onClick={setActiveEventId}
-              />
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{
+                  duration: 0.2,
+                  ease: "easeOut",
+                }}
+              >
+                <TimelineEvent
+                  event={event}
+                  isActive={activeEventId === event.id}
+                  onClick={setActiveEventId}
+                />
+              </motion.div>
             ))}
           </motion.div>
 
@@ -385,7 +432,7 @@ const InteractiveTimeline = () => {
                 whileTap={{ scale: 0.95 }}
                 layout="position"
                 transition={{
-                  layout: { duration: 0.3, ease: "easeInOut" },
+                  layout: { duration: 0.2, ease: "easeInOut" },
                 }}
               >
                 {expanded ? (
@@ -402,7 +449,7 @@ const InteractiveTimeline = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Show Less
+                    Show Key Milestones
                   </>
                 ) : (
                   <>
@@ -418,7 +465,7 @@ const InteractiveTimeline = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    See More ({filteredEvents.length - visibleEvents.length})
+                    Show All Events
                   </>
                 )}
               </motion.button>

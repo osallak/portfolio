@@ -126,11 +126,7 @@ export default function Banner() {
   }));
 
   return (
-    <div
-      className="min-h-[100dvh] w-full relative overflow-x-hidden"
-      id="home"
-      ref={ref}
-    >
+    <div className="min-h-[100dvh] w-full relative" id="home" ref={ref}>
       {/* Animated background particles */}
       <div className="absolute inset-0 z-0">
         {particles.map((particle) => (
