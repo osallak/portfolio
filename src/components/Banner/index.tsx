@@ -306,11 +306,6 @@ export default function Banner() {
             whileHover={{ boxShadow: "0 0 30px 5px rgba(168, 85, 247, 0.3)" }}
             transition={{ duration: 0.3 }}
           >
-            {/* Animated gradient border */}
-            <div className="absolute inset-0 z-[-1] opacity-30">
-              <div className="absolute inset-[-4px] rounded-2xl bg-gradient-to-r from-[#8c1df3] via-[#f714d1] to-[#621aaf] animate-[spin_4s_linear_infinite]" />
-            </div>
-
             {/* Title Group */}
             <div className="space-y-3 sm:space-y-4 text-center relative">
               <motion.div
