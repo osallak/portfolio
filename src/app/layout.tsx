@@ -18,16 +18,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oussama Sallak | Portfolio",
+  title: "Oussama Sallak | Full-Stack & AI Engineer",
   description:
-    "Welcome to Oussama Sallak's portfolio - Full Stack Developer passionate about creating innovative web solutions",
+    "Full-Stack & AI Engineer specializing in AI agents, LangChain, MLOps, and intelligent systems. Building scalable AI-powered applications with Python, FastAPI, and modern web technologies.",
   authors: [{ name: "Oussama Sallak" }],
   keywords: [
     "Oussama Sallak",
-    "Portfolio",
+    "AI Engineer",
+    "MLOps",
+    "LangChain",
+    "AI Agents",
+    "RAG",
+    "Machine Learning",
     "Full Stack Developer",
-    "Web Development",
+    "Python",
+    "FastAPI",
+    "Django",
+    "React",
+    "Next.js",
     "Software Engineer",
+    "AI Integration",
+    "Model Deployment",
   ],
   creator: "Oussama Sallak",
   icons: {
@@ -49,16 +60,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "Oussama Sallak | Portfolio",
+    title: "Oussama Sallak | Full-Stack & AI Engineer",
     description:
-      "Welcome to Oussama Sallak's portfolio - Full Stack Developer passionate about creating innovative web solutions",
+      "Full-Stack & AI Engineer specializing in AI agents, LangChain, MLOps, and intelligent systems. Building scalable AI-powered applications with Python, FastAPI, and modern web technologies.",
     siteName: "Oussama Sallak Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oussama Sallak | Portfolio",
+    title: "Oussama Sallak | Full-Stack & AI Engineer",
     description:
-      "Welcome to Oussama Sallak's portfolio - Full Stack Developer passionate about creating innovative web solutions",
+      "Full-Stack & AI Engineer specializing in AI agents, LangChain, MLOps, and intelligent systems. Building scalable AI-powered applications with Python, FastAPI, and modern web technologies.",
     creator: "@OussamaSallak",
   },
 };

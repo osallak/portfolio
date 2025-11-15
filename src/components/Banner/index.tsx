@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from "react";
 export default function Banner() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false });
-  const occupation = "Software Engineer & Full Stack Developer";
+  const occupation = "Full-Stack & AI Engineer | MLOps Specialist";
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMounted, setIsMounted] = useState(false);
 
@@ -24,12 +24,12 @@ export default function Banner() {
 
   const [typewriterText] = useTypewriter({
     words: [
-      "Technology",
-      "Programming",
-      "Development",
-      "AI",
+      "AI Integration",
+      "Machine Learning",
+      "MLOps",
+      "Full-Stack Development",
       "Innovation",
-      "Problem Solving",
+      "Scalable Solutions",
     ],
     loop: true,
     typeSpeed: 80,

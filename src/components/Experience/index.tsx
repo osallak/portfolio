@@ -12,18 +12,39 @@ const DynamicChrono = dynamic(
 
 const experienceData = [
   {
+    title: "July 2025 - Present",
+    cardTitle: "Chemp.ai",
+    cardSubtitle: "Frontend & Mobile Engineer | AI Integration Lead",
+    cardDetailedText:
+      "Leading AI integration efforts across web and mobile platforms. Building intelligent features with React, Next.js, and React Native while implementing LLM-powered capabilities to enhance user experience and automate workflows.",
+  },
+  {
+    title: "January 2025 - Present",
+    cardTitle: "Andala.ai",
+    cardSubtitle: "Backend & MLOps Engineer",
+    cardDetailedText:
+      "Architecting end-to-end MLOps infrastructure for multimodal AI models (music, video, image generation). Built CI/CD pipelines for model deployment, optimized inference costs by 45% through GPU utilization strategies, and implemented scalable APIs with autoscaling on AWS.",
+  },
+  {
+    title: "April 2025 - Present",
+    cardTitle: "Akera EdTech",
+    cardSubtitle: "Backend & AI Engineer",
+    cardDetailedText:
+      "Developed AI-assisted learning platform integrating LangChain and RAG for personalized tutoring. Built retrieval-augmented generation pipelines with vector databases, enabling real-time adaptive learning for hundreds of concurrent users with sub-second latency.",
+  },
+  {
     title: "September 2024 - Present",
     cardTitle: "Fiverr, Upwork",
-    cardSubtitle: "Full-Stack Developer",
+    cardSubtitle: "Full-Stack & AI Freelancer",
     cardDetailedText:
-      "An intensive project-based curriculum focused on software engineering, algorithms, and system programming. Part of the prestigious 42 Network known for its peer-to-peer learning methodology.",
+      "Delivering AI-powered solutions and full-stack applications for diverse clients. Maintained top-rated status with 100% client satisfaction across projects involving AI integration, web applications, and API development.",
   },
   {
     title: "December 2023 - September 2024",
     cardTitle: "Lendstack Inc",
     cardSubtitle: "Software Engineer",
     cardDetailedText:
-      "An intensive project-based curriculum focused on software engineering, algorithms, and system programming. Part of the prestigious 42 Network known for its peer-to-peer learning methodology.",
+      "Optimized fintech backend performance, reducing API response times by 40% through PostgreSQL tuning and code refactoring. Led KYC implementation and improved transaction throughput for high-volume financial operations.",
   },
 ];
 

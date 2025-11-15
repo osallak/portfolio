@@ -119,19 +119,19 @@ const timelineData = [
   {
     id: 12,
     date: "Oct 2023",
-    title: "Full-Stack Certification",
+    title: "Completed 1337 Common Core at 100%",
     description:
-      "Completed the common core curriculum at 1337 with a full-stack web application, demonstrating proficiency across the entire software stack",
+      "Achieved full completion of 42 Network's foundational program covering algorithms, C/C++, networking, and systems engineering. Validated over 20 projects demonstrating mastery across the full-stack.",
     category: "achievement",
     icon: <FaTrophy className="text-yellow-400" />,
     isKeyMilestone: true,
   },
   {
     id: 13,
-    date: "Nov 2023 - Jul 2024",
-    title: "Software Engineer at LendStack",
+    date: "Nov 2023 - Sep 2024",
+    title: "Software Engineer at Lendstack",
     description:
-      "Led KYC implementation for a fintech startup, reducing verification times by 30% and enhancing platform scalability",
+      "Optimized fintech backend performance by 40% through PostgreSQL tuning and code refactoring. Led KYC implementation reducing verification times by 30% and enhanced platform scalability for high-volume transactions.",
     category: "work",
     icon: <FaBriefcase className="text-green-400" />,
     isKeyMilestone: true,
@@ -139,39 +139,49 @@ const timelineData = [
   {
     id: 14,
     date: "2024",
-    title: "Activia Challenge Project",
+    title: "Top-Rated Freelancer on Fiverr",
     description:
-      "Developed high-traffic promotion platform for Activia Danone handling 100K+ users with ML-powered product recognition",
+      "Maintained 100% client satisfaction across multiple AI-powered and full-stack freelance projects, delivering high-quality solutions for diverse technical requirements.",
+    category: "achievement",
+    icon: <FaTrophy className="text-yellow-400" />,
+    isKeyMilestone: false,
+  },
+  {
+    id: 15,
+    date: "Jan 2025",
+    title: "Launched Andala.ai MLOps Infrastructure",
+    description:
+      "Designed end-to-end MLOps system for multimodal model scaling and monitoring on AWS. Reduced inference costs by 45% through GPU optimization and built CI/CD pipelines for automated model deployment.",
     category: "work",
     icon: <FaBriefcase className="text-green-400" />,
     isKeyMilestone: true,
   },
   {
-    id: 15,
-    date: "Jul 2024 - Mar 2025",
-    title: "Freelance Development",
-    description:
-      "Building web applications, APIs, and Discord bots for various clients while advancing technical expertise",
-    category: "work",
-    icon: <FaBriefcase className="text-green-400" />,
-    isKeyMilestone: false,
-  },
-  {
     id: 16,
-    date: "Apr 2025 - Present",
-    title: "Full Stack Developer at Akera",
+    date: "Apr 2025",
+    title: "Delivered AI-Assisted LMS at Akera",
     description:
-      "Working on building and maintaining scalable web applications, focusing on both frontend and backend development",
+      "Integrated agentic AI into e-learning platform using LangChain and RAG, enabling contextual automation and personalized learning for hundreds of concurrent users with sub-second retrieval latency.",
     category: "work",
     icon: <FaBriefcase className="text-green-400" />,
     isKeyMilestone: true,
   },
   {
     id: 17,
-    date: "Current",
-    title: "Advanced Curriculum",
+    date: "Jul 2025 - Present",
+    title: "AI Integration Lead at Chemp.ai",
     description:
-      "Pursuing specialized studies in web technologies, distributed systems, and infrastructure management at 1337",
+      "Leading AI integration efforts across mobile and web platforms. Building intelligent features with React Native and implementing LLM-powered capabilities to automate workflows and enhance user experience.",
+    category: "work",
+    icon: <FaBriefcase className="text-green-400" />,
+    isKeyMilestone: true,
+  },
+  {
+    id: 18,
+    date: "Current",
+    title: "Advanced AI/MLOps Specialization",
+    description:
+      "Pursuing Senior Software Architect specialization at 1337 with focus on AI agents, distributed systems, and MLOps infrastructure for production-grade intelligent applications.",
     category: "education",
     icon: <FaGraduationCap className="text-blue-400" />,
     isKeyMilestone: false,
@@ -480,16 +490,7 @@ const InteractiveTimeline = () => {
               Looking Forward
             </h3>
             <p className="text-[#ababab] text-center max-w-3xl mx-auto">
-              As I continue advancing in my software engineering journey,
-              I&apos;m particularly focused on mastering distributed systems,
-              microservice architectures, and cloud-native development. Having
-              built a solid foundation in full-stack web development, system
-              programming, and DevOps, I&apos;m now exploring areas like
-              Kubernetes, infrastructure as code, and Web3 technologies. My goal
-              is to create scalable, high-impact solutions that combine
-              technical excellence with exceptional user experiences, while
-              continuing to contribute to meaningful projects and expand my
-              expertise across the technology stack.
+              As I continue advancing in AI engineering and MLOps, I&apos;m focused on pushing the boundaries of intelligent systems—from building sophisticated AI agents with LangChain to deploying production-grade multimodal models at scale. My goal is to bridge the gap between AI research and real-world applications, creating systems that are not only intelligent but also reliable, scalable, and cost-efficient. I&apos;m particularly excited about the intersection of agentic AI, retrieval-augmented generation, and distributed systems, and I&apos;m committed to contributing to meaningful projects that leverage these technologies to solve complex problems and deliver exceptional user experiences.
             </p>
           </div>
         </motion.div>

@@ -1,71 +1,53 @@
 {
   "projects": [
     {
+      "title": "Andala.ai - AI Social Media Platform",
+      "image": "andala.ai.png",
+      "desc": "End-to-end MLOps platform for multimodal content generation (music, video, images). Built scalable inference APIs with PyTorch, Django, and AWS, reducing inference costs by 45% through GPU optimization and caching strategies.",
+      "link": "https://andala.ai",
+      "technologies": ["Python", "Django", "PyTorch", "AWS", "Docker", "CI/CD", "MLOps"]
+    },
+    {
+      "title": "LLM-Assisted Learning Platform",
+      "image": "ai-lms.png",
+      "desc": "AI-powered e-learning platform with LangChain-based retrieval-augmented generation (RAG). Integrated domain-specific LLMs, vector databases, and personalized tutoring agents enabling real-time adaptive learning with sub-second retrieval latency.",
+      "technologies": ["Python", "FastAPI", "LangChain", "RAG", "Redis", "Vector DBs", "Docker"]
+    },
+    {
       "title": "Portfolio Website",
       "image": "portfolio.jpeg",
-      "desc": "A personal portfolio website built with Next.js and TailwindCSS to showcase my projects, qualifications, and skills. Features a modern design with smooth animations and responsive layout.",
+      "desc": "A personal portfolio website built with Next.js and TailwindCSS to showcase my AI/ML projects, qualifications, and technical skills. Features modern design with smooth animations, GitHub API integration, and responsive layout.",
       "repo": "https://github.com/osallak/portfolio",
       "link": "https://osallak.tech",
-      "technologies": ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"]
+      "technologies": ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion", "GraphQL"]
+    },
+    {
+      "title": "Streamix - Video Streaming Platform",
+      "image": "streamix.png",
+      "desc": "Netflix-style streaming platform with dynamic content loading, server-side rendering, and optimized caching. Implemented analytics and user behavior tracking for personalized recommendations, reducing page load time by 40%.",
+      "repo": "https://github.com/osallak/streamix",
+      "technologies": ["Next.js", "TypeScript", "TailwindCSS", "PostgreSQL", "TMDB API"]
+    },
+    {
+      "title": "SpinShot - Multiplayer Gaming Platform",
+      "image": "pong.png",
+      "desc": "Real-time multiplayer pong game built with WebSocket communication and microservices architecture. Supports hundreds of simultaneous players with minimal latency, featuring chat, matchmaking, and comprehensive testing.",
+      "repo": "https://github.com/osallak/SpinShot",
+      "technologies": ["NestJS", "TypeScript", "WebSocket", "PostgreSQL", "Docker", "Microservices"]
     },
     {
       "title": "Spotify Profile Stats & Dashboard",
       "image": "spotify.png",
-      "desc": "A Spotify profile stats and dashboard built with Next.js and TailwindCSS. It allows you to see your Spotify profile stats and dashboard.",
+      "desc": "A Spotify profile stats and dashboard built with Next.js and TailwindCSS. Visualizes listening habits, top artists, tracks, and provides personalized music insights through Spotify API integration.",
       "repo": "https://github.com/osallak/spotify-wrapped",
       "link": "https://spotify-wrapped-xi.vercel.app/",
       "technologies": ["Next.js", "TypeScript", "TailwindCSS", "Spotify API"]
     },
     {
-      "title": "Wordle Clone",
-      "image": "wordle.png",
-      "desc": "A Wordle clone built with React. It allows you to play the game and see your stats.",
-      "repo": "https://github.com/osallak/wordle-clone",
-      "link": "https://react-wordle-orcin.vercel.app/",
-      "technologies": ["React", "JavaScript", "CSS"]
-    },
-    {
-      "title": "Streamix",
-      "image": "streamix.png",
-      "desc": "A movie streaming platform built with Next.js and TailwindCSS. It allows you to stream movies and TV shows ",
-      "repo": "https://github.com/osallak/streamix",
-      "technologies": [
-        "Next.js",
-        "TypeScript",
-        "TailwindCSS",
-        "TMDB API",
-        "VIDSRC API"
-      ]
-    },
-    {
-      "title": "Multiplayer Pong Game",
-      "image": "pong.png",
-      "desc": "A multiplayer pong game built with React and Socket.io. It allows you to play the game, chat, and see your stats with your friends.",
-      "repo": "https://github.com/osallak/SpinShot",
-      "technologies": [
-        "Next.js",
-        "Socket.io",
-        "TailwindCSS",
-        "Nest.js",
-        "PostgreSQL",
-        "REST API",
-        "Docker"
-      ]
-    },
-    {
-      "title": "System Administration Project",
+      "title": "IRC Server Implementation",
       "image": "inception.png",
-      "desc": "A containerized web infrastructure project featuring WordPress, NGINX, and MariaDB. Built with Docker for seamless deployment, featuring TLS encryption, automated container orchestration, and persistent data storage.",
-      "repo": "https://github.com/osallak/inception",
-      "technologies": [
-        "Docker",
-        "NGINX",
-        "WordPress",
-        "MariaDB",
-        "PHP-FPM",
-        "Shell Script",
-        "TLS 1.2/1.3"
-      ]
+      "desc": "RFC 1459-compliant IRC server with efficient concurrency and event handling. Implemented message routing, user authentication, and command parsing demonstrating mastery of sockets, multi-threading, and low-level networking.",
+      "technologies": ["C++", "Network Programming", "Unix", "Concurrency"]
     }
   ]
 }

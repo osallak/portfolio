@@ -57,38 +57,19 @@ const About = () => {
             className="flex-1 space-y-3 sm:space-y-6 px-2 sm:px-0"
           >
             <p className="text-[15px] sm:text-lg lg:text-xl text-[#ababab] leading-relaxed">
-              Full Stack Engineer with over 4 years of hands-on development
-              experience spanning fintech, system architecture, and web
-              applications. My journey combines professional work at a financial
-              services company, diverse freelance projects, and continuous
-              self-improvement through open-source contributions.
+              Full-Stack & AI Engineer with 4+ years of experience building intelligent applications across fintech, AI platforms, and e-learning systems. I specialize in integrating AI agents, deploying machine learning models, and architecting scalable MLOps pipelines that bring cutting-edge AI capabilities to production.
             </p>
             <p className="text-[15px] sm:text-lg lg:text-xl text-[#ababab] leading-relaxed">
-              I specialize in building performant web applications with Next.js,
-              React, and TypeScript on the frontend, backed by robust Node.js,
-              NestJS, and PostgreSQL solutions. My background in system
-              programming with C/C++ has equipped me with a deep understanding
-              of performance optimization and efficient resource management that
-              informs my approach to web development.
+              Currently leading AI integration efforts at Chemp.ai while building production-ready systems with Python, FastAPI, and Django on the backend, complemented by React, Next.js, and React Native on the frontend. My expertise spans LangChain-powered agentic workflows, retrieval-augmented generation (RAG), vector databases, and containerized deployment with Docker and AWS.
             </p>
             <p className="text-[15px] sm:text-lg lg:text-xl text-[#ababab] leading-relaxed">
-              What sets me apart is my versatility across the entire stack—from
-              crafting intuitive user interfaces to designing scalable backend
-              architectures and implementing DevOps pipelines. I excel in
-              environments that challenge me to apply both creative and
-              analytical thinking to complex problems.
+              What sets me apart is my ability to bridge AI research and software engineering—from fine-tuning multimodal models and building intelligent agents to designing scalable APIs and intuitive user interfaces. My background in system programming with C/C++ at 1337 School (42 Network) has equipped me with deep performance optimization skills that inform my approach to AI infrastructure.
             </p>
             <p className="text-[15px] sm:text-lg lg:text-xl text-[#ababab] leading-relaxed">
-              Currently, I&apos;m expanding my expertise in Web3 technologies,
-              distributed systems, and cloud-native architectures. I&apos;m
-              particularly interested in projects that leverage modern
-              frameworks to create scalable, resilient applications that deliver
-              exceptional user experiences.
+              Recent achievements include deploying AI-assisted learning platforms with sub-second retrieval latency, reducing model inference costs by 45% through optimization strategies, and building end-to-end MLOps systems for multimodal content generation at Andala.ai. At Lendstack, I optimized fintech backend performance by 40% through PostgreSQL tuning and architectural improvements.
             </p>
             <p className="text-[15px] sm:text-lg lg:text-xl text-[#ababab] leading-relaxed">
-              I&apos;m open to collaboration on innovative projects where I can
-              contribute my technical skills while continuing to grow as an
-              engineer. Let&apos;s build something remarkable together.
+              I&apos;m passionate about the intersection of AI and practical software engineering—building systems that are not only intelligent but also scalable, maintainable, and deliver exceptional user experiences. Let&apos;s collaborate on AI-powered solutions that make a real impact.
             </p>
           </motion.div>
 
